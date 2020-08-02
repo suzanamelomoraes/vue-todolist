@@ -1,7 +1,7 @@
 <template>
   <div>
     <div v-bind:key="todo.id" v-for="todo in todos">
-      <TodoItem />
+      <TodoItem v-bind:todo="todo" />
     </div>
   </div>
 </template>
@@ -11,8 +11,8 @@ import TodoItem from "./TodoItem";
 
 export default {
   name: "Todos",
-  components:{
-      TodoItem
+  components: {
+    TodoItem,
   },
   props: ["todos"],
 };
