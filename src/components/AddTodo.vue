@@ -13,7 +13,8 @@
 </template>
 
 <script>
-import { v4 as uuidv4 } from 'uuid';
+// import { v4 as uuidv4 } from 'uuid';
+// As we imported and use jsonplaceholder we no longer need to generate id from uuid
 export default {
   name: 'AddTodo',
   data() {
@@ -24,7 +25,6 @@ export default {
   methods: {
     addTodo() {
       const newTodo = {
-        id: uuidv4(),
         title: this.title,
         completed: false,
       };
