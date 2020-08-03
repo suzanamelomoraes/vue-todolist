@@ -15,6 +15,13 @@ export default {
       title: "",
     };
   },
+  methods:{
+      addTodo(){
+          const newTodo ={
+              id: ''
+          }
+      }
+  }
 };
 </script>
 
