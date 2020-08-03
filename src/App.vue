@@ -33,7 +33,12 @@ export default {
     },
   },
 
-  created() {},
+  created() {
+    axios
+      .get('https://jsonplaceholder.typicode.com/todos?_limit=6')
+      .then((res) => (this.todos = res.data))
+      .catch((err) => console.log(err));
+  },
 };
 </script>
 
